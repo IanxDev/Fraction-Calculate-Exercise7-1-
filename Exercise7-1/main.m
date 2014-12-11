@@ -7,11 +7,46 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "Fraction.h"
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        Fraction *aFraction = [Fraction new];
+        Fraction *bFraction = [Fraction new];
+        Fraction *resultFraction;
+        [aFraction setTo:1 over:4];
+        [bFraction setTo:1 over:2];
+        
+        [aFraction print];
+        NSLog(@"+");
+        [bFraction print];
+        NSLog(@"=");
+        
+        resultFraction = [aFraction add:bFraction];
+        [resultFraction print];
+        
+        [aFraction print];
+        NSLog(@"-");
+        [bFraction print];
+        NSLog(@"=");
+        
+        resultFraction = [aFraction subtract:bFraction];
+        [resultFraction print];
+        
+        [aFraction print];
+        NSLog(@"*");
+        [bFraction print];
+        NSLog(@"=");
+        
+        resultFraction = [aFraction multiply:bFraction];
+        [resultFraction print];
+        
+        [aFraction print];
+        NSLog(@"/");
+        [bFraction print];
+        NSLog(@"=");
+        
+        resultFraction = [aFraction divide:bFraction];
+        [resultFraction print];
     }
     return 0;
 }
