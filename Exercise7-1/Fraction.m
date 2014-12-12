@@ -61,12 +61,8 @@
 -(Fraction *) divide:(Fraction *)f
 {
     Fraction *result = [Fraction new];
-    int temp = 0;
-    temp = f.numerator;
-    f.numerator = f.denominator;
-    f.denominator = temp;
-    result.numerator = numerator * f.numerator;
-    result.denominator = denominator * f.denominator;
+    result.numerator = numerator * f.denominator;
+    result.denominator = denominator * f.numerator;
     [result reduce];
     return result;
 }
